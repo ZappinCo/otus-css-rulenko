@@ -1,0 +1,11 @@
+@import url(../css/reset.css);
+@import url(../css/fonts.css);
+/* Для общих свойств */
+@import url(../css/body.css);
+@import url(../css/header.css);
+@import url(../css/hero-section.css);
+@import url(../css/biography.css);
+@import url(../css/designers.css);
+@import url(../css/testimonials.css);
+@import url(../css/strong-points.css);
+@import url(../css/footer.css);

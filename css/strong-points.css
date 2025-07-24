@@ -1,0 +1,17 @@
+.strong-points__header {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.strong-points__subheader {
+  font-family: "Playfair Display";
+  font-size: 86px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.strong-points__list {
+  font-family: "Bitter Regular";
+  font-size: 34px;
+}
