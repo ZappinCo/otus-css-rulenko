@@ -1,0 +1,23 @@
+.biography {
+  color: #0D0D0D;
+  font-size: 18px;
+}
+
+.biography__header {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: right;
+  color: #000000;
+}
+
+.biography__subject {
+  font-family: "Playfair Display";
+  font-size: 86px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.biography__quote {
+  font-family: "Bitter Regular";
+  font-size: 26px;
+}

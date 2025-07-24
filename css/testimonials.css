@@ -1,0 +1,23 @@
+.testimonials__header {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: right;
+  color: #000000;
+}
+
+.testimonials__links {
+  font-size: 16px;
+  text-align: left;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.testimonials__accent {
+  font-weight: 700;
+}
+
+.testimonials__quote {
+  font-family: "Bitter Regular";
+  font-size: 32px;
+  text-align: center;
+}
