@@ -1,0 +1,24 @@
+.footer {
+  background-color: #0D0D0D;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.footer__contacts {
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.footer__slogan {
+  font-size: 18px;
+  text-align: center;
+}
+
+.footer__accent {
+  font-weight: 900;
+}
+
+.footer__copiright {
+  text-align: right;
+  font-weight: 400;
+}

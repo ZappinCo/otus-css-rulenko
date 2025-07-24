@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../fonts/playfairdisplay-semibold.eot');
+  src: url('../fonts/playfairdisplay-semibold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/playfairdisplay-semibold.woff2') format('woff2'),
+    url('../fonts/playfairdisplay-semibold.woff') format('woff'),
+    url('../fonts/playfairdisplay-semibold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../fonts/playfairdisplay-medium.eot');
+  src: url('../fonts/playfairdisplay-medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/playfairdisplay-medium.woff2') format('woff2'),
+    url('../fonts/playfairdisplay-medium.woff') format('woff'),
+    url('../fonts/playfairdisplay-medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/roboto_regular.eot');
+  src: url('../fonts/roboto_regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/roboto_regular.woff2') format('woff2'),
+    url('../fonts/roboto_regular.woff') format('woff'),
+    url('../fonts/roboto_regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/roboto_medium.eot');
+  src: url('../fonts/roboto_medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/roboto_medium.woff2') format('woff2'),
+    url('../fonts/roboto_medium.woff') format('woff'),
+    url('../fonts/roboto_medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/roboto_bold.eot');
+  src: url('../fonts/roboto_bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/roboto_bold.woff2') format('woff2'),
+    url('../fonts/roboto_bold.woff') format('woff'),
+    url('../fonts/roboto_bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/roboto_black.eot');
+  src: url('../fonts/roboto_black.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/roboto_black.woff2') format('woff2'),
+    url('../fonts/roboto_black.woff') format('woff'),
+    url('../fonts/roboto_black.ttf') format('truetype');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'Bitter Regular';
+  src: url('../fonts/bitter_regular.eot');
+  src: url('../fonts/bitter_regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/bitter_regular.woff2') format('woff2'),
+    url('../fonts/bitter_regular.woff') format('woff'),
+    url('../fonts/bitter_regular.ttf') format('truetype');
+}
