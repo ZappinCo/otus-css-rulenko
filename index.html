@@ -5,93 +5,99 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <header>
-    <h1>Mod</h1>
+  <header class="header">
+    <h1 class="header__title">Mod</h1>
     <nav>
-      <a href="#biography">Biography</a>
-      <a href="#designers">Designers</a>
-      <a href="#testimonials">Testimonials</a>
-      <a href="#strong-points">Strong points</a>
-      <a href="#contacts"><img src="img/icon-message.svg" alt="Message icon">Message</a>
+      <a href="#biography" class="header__ref">Biography</a>
+      <a href="#designers" class="header__ref">Designers</a>
+      <a href="#testimonials" class="header__ref">Testimonials</a>
+      <a href="#strong-points" class="header__ref">Strong points</a>
+      <a href="#contacts" class="header__ref"><img src="img/icon-message.svg" alt="Message icon">Message</a>
     </nav>
   </header>
-  <article>
+  <article class="hero-section">
     <img src="img/inside-weather.jpg" alt="black sofa with flowerpot">
-    <h2>Mod Studio</h2>
-    <h3>Modern Web Studio</h3>
+    <h2 class="hero-section__title">Mod Studio</h2>
+    <h3 class="hero-section__subtitle">Modern Web Studio</h3>
   </article>
-  <section id="biography">
-    <h3>Biography</h3>
-    <h2>Katya<br>Mills</h2>
+  <section id="biography" class="biography">
+    <h3 class="biography__header">Biography</h3>
+    <h2 class="biography__subject">Katya<br>Mills</h2>
     Art Director<br>
     Scenography / Styling / Creative Photography / Design
     <hr>
 
-    <q>The more I deal with the work<br>as something that is my own,<br>as something that is personal,<br>the more
+    <q class="biography__quote">The more I deal with the work<br>as something that is my own,<br>as something that is
+      personal,<br>the more
       successful it is.</q>
   </section>
   <section>
     <img src="img/jared-weiss.jpg" alt="Jared Weiss">
   </section>
-  <section id="designers">
+  <section id="designers" class="designers">
     <header>
-      <h2>Designers</h2>
+      <h2 class="designers__header">Designers</h2>
     </header>
     <figure>
       <img src="img/jess-wonder.jpg" alt="Jess Wonder">
-      <figcaption>
-        <h3>JESS WONDER</h3>
-        <span>From/</span> Be more flower
+      <figcaption class="designers__text">
+        <h3 class="designers__subheader">JESS WONDER</h3>
+        <span class="designers__accent">From/</span> Be more flower
         <br>
-        <span>Skills/</span> Design Strategy / Marketing
+        <span class="designers__accent">Skills/</span> Design Strategy / Marketing
       </figcaption>
     </figure>
     <figure>
       <img src="img/kameron-clein.jpg" alt="Kameron Clein">
-      <figcaption>
-        <h3>KAMERON CLEIN</h3>
-        <span>From/</span> Be more flower
+      <figcaption class="designers__text">
+        <h3 class="designers__subheader">KAMERON CLEIN</h3>
+        <span class="designers__accent">From/</span> Be more flower
         <br>
-        <span>Skills/</span> Design Strategy / Marketing
+        <span class="designers__accent">Skills/</span> Design Strategy / Marketing
       </figcaption>
     </figure>
     <figure>
       <img src="img/louisse-red.jpg" alt="Louisse Red">
-      <figcaption>
-        <h3>LOUISSE RED</h3>
-        <span>From/</span> Be more flower
+      <figcaption class="designers__text">
+        <h3 class="designers__subheader">LOUISSE RED</h3>
+        <span class="designers__accent">From/</span> Be more flower
         <br>
-        <span>Skills/</span> Design Strategy / Marketing
+        <span class="designers__accent">Skills/</span> Design Strategy / Marketing
       </figcaption>
     </figure>
     <figure>
       <img src="img/kameron-clein.jpg" alt="Kameron Clein">
-      <figcaption>
-        <h3>KAMERON CLEIN</h3>
-        <span>From/</span> Be more flower
+      <figcaption class="designers__text">
+        <h3 class="designers__subheader">KAMERON CLEIN</h3>
+        <span class="designers__accent">From/</span> Be more flower
         <br>
-        <span>Skills/</span> Design Strategy / Marketing
+        <span class="designers__accent">Skills/</span> Design Strategy / Marketing
       </figcaption>
     </figure>
   </section>
+  <section id="testimonials"></section>
   <section>
-    <a href="www.whitepapers.com"><span>Creativity</span> www.whitepapers.com</a>
-    <a href="www.whitepapers.com"><span>Creativity</span> www.whitepapers.com</a>
-    <a href="www.whitepapers.com"><span>Website</span> www.whitepapers.com</a>
+    <a href="www.whitepapers.com" class="testimonials__links"><span class="testimonials__accent">Creativity</span>
+      www.whitepapers.com</a>
+    <a href="www.whitepapers.com" class="testimonials__links"><span class="testimonials__accent">Creativity</span>
+      www.whitepapers.com</a>
+    <a href="www.whitepapers.com" class="testimonials__links"><span class="testimonials__accent">Website</span>
+      www.whitepapers.com</a>
     <img src="img/keghan-crossland.jpg" alt="coffeeshop">
   </section>
-  <section id="testimonials">
-    <h2>Testimonials</h2>
-    <q>I just really<br>want to do<br>good work<br>and work with<br>some great<br>people, people<br>who
-      challenge<br>me.</q>
-    <img src="img/sinitta-leunen.jpg" alt="bag">
+  <h2 class="testimonials__header">Testimonials</h2>
+  <q class="testimonials__quote">I just really<br>want to do<br>good work<br>and work with<br>some great<br>people,
+    people<br>who
+    challenge<br>me.</q>
+  <img src="img/sinitta-leunen.jpg" alt="bag">
   </section>
-  <section id="strong-points">
+  <section id="strong-points" class="strong-points">
     <header>
-      <h2>Strong points</h2>
+      <h2 class="strong-points__header">Strong points</h2>
     </header>
     <article>
       <img src="img/dawid-liberadzki.jpg" alt="Laptop">
@@ -100,8 +106,8 @@
       <img src="img/avery-klein.jpg" alt="Chair">
     </article>
     <article>
-      <h2>Strengths</h2>
-      <ul>
+      <h2 class="strong-points__subheader">Strengths</h2>
+      <ul class="strong-points__list">
         <li>Interiors</li>
         <li>Outdoors</li>
         <li>Portraits</li>
@@ -118,16 +124,16 @@
       <img src="img/keghan-crossland.jpg" alt="coffeeshop">
     </article>
   </section>
-  <footer>
-    <div id="contacts" class="contacts">
-      <a href="tel:+79211234567">+7 921 123-45-67</a>
+  <footer class="footer">
+    <div id="contacts">
+      <a href="tel:+79211234567" class="footer__contacts">+7 921 123-45-67</a>
       <br>
-      <a href="mailto:info@modstudio.com">info@modstudio.com</a>
+      <a href="mailto:info@modstudio.com" class="footer__contacts">info@modstudio.com</a>
     </div>
-    <div class="slogan">
-      A product of <span>MOD</span>
+    <div class="footer__slogan">
+      A product of <span class="footer__accent">MOD</span>
     </div>
-    <div class="copiright">
+    <div class="footer__copiright">
       © 2023 Mod Media. All rights reserved
     </div>
   </footer>
