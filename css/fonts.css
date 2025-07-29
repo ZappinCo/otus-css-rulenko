@@ -65,4 +65,5 @@
     url('../fonts/bitter_regular.woff2') format('woff2'),
     url('../fonts/bitter_regular.woff') format('woff'),
     url('../fonts/bitter_regular.ttf') format('truetype');
+  font-weight: 400;
 }

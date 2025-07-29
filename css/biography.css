@@ -1,23 +1,55 @@
 .biography {
+  display: flex;
+  flex-flow: row wrap;
   color: #0D0D0D;
   font-size: 18px;
+  padding: 0 137.5px;
+  justify-content: space-between;
+}
+
+.biography__image {
+  width: 49%;
+  object-fit: cover;
 }
 
 .biography__header {
+  writing-mode: tb-rl;
+  align-self: flex-start;
+  transform: rotate(180deg) translateX(-22%);
   font-size: 24px;
   font-weight: 700;
   text-align: right;
   color: #000000;
+  flex-grow: 1;
+}
+
+.biography__info {
+  width: 39%;
+  padding: 15% 0;
+  line-height: 115%;
 }
 
 .biography__subject {
   font-family: "Playfair Display";
   font-size: 86px;
   font-weight: 500;
+  line-height: 133%;
   color: #000000;
+  padding-bottom: 38px;
+}
+
+.biography__decoration {
+  width: 20px;
+  height: 6px;
+  background-color: #0D0D0D;
+  border: none;
+  margin: 35px 0 18px 0;
 }
 
 .biography__quote {
   font-family: "Bitter Regular";
   font-size: 26px;
+  line-height: 120%;
+  color: #0D0D0D;
+  font-weight: 400;
 }
