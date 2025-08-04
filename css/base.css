@@ -16,3 +16,8 @@ h2 {
   font-weight: 500;
   text-align: left;
 }
+
+.container {
+  max-width: 1165px;
+  margin: 0 auto;
+}
