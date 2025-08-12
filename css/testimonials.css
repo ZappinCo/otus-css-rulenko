@@ -1,4 +1,28 @@
+.testimonials {
+  display: grid;
+  grid-template-columns: 8% 40% 5% 35%;
+  column-gap: 26px;
+}
+
+.testimonials__links-container {
+  grid-row: 1/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: end;
+  gap: 35px;
+}
+
+.testimonials__image {
+  grid-row: 1/3;
+  object-fit: cover;
+  width: 97%;
+}
+
 .testimonials__header {
+  grid-row: 1/3;
+  writing-mode: tb-rl;
+  transform: rotate(180deg) translateX(30%);
   font-size: 24px;
   font-weight: 700;
   text-align: right;
@@ -6,6 +30,8 @@
 }
 
 .testimonials__links {
+  writing-mode: tb-rl;
+  transform: rotate(180deg) translateX(-8%);
   font-size: 16px;
   text-align: left;
   text-decoration: none;
@@ -17,7 +43,19 @@
 }
 
 .testimonials__quote {
+  margin: auto;
+  padding-top: 3%;
+  quotes: none;
   font-family: "Bitter Regular";
   font-size: 32px;
   text-align: center;
+  line-height: 120%;
+  letter-spacing: -1px;
+}
+
+.testimonials__customer-image {
+  padding-top: 3%;
+  margin: 0 auto;
+  object-fit: cover;
+  width: 53%;
 }
