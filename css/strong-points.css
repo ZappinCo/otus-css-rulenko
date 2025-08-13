@@ -1,7 +1,28 @@
+.strong-points {
+  margin-bottom: 130px;
+}
+
 .strong-points__header {
   font-size: 24px;
   font-weight: 700;
   color: #000000;
+  margin-bottom: 30px;
+}
+
+.strong-points__container {
+  display: flex;
+  justify-content: space-between;
+  overflow-y: auto;
+  align-items: start;
+}
+
+.strong-points__article {
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.strong-points__article_wide {
+  min-width: 450px;
 }
 
 .strong-points__subheader {
@@ -9,9 +30,22 @@
   font-size: 86px;
   font-weight: 500;
   color: #000000;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .strong-points__list {
   font-family: "Bitter Regular";
   font-size: 34px;
+  padding-left: 115px;
+  line-height: 125%;
+}
+
+@supports (display: grid) {
+  .strong-points__container {
+    display: grid;
+    justify-content: space-between;
+    overflow-y: auto;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
