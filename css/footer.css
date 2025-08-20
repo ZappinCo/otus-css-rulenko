@@ -2,12 +2,26 @@
   background-color: #0D0D0D;
   color: #ffffff;
   font-size: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  align-items: center;
+  padding: 70px 20px;
+}
+
+.footer__contacts_container {
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .footer__contacts {
   color: #ffffff;
   font-weight: 400;
+  line-height: 26px;
 }
+
 
 .footer__slogan {
   font-size: 18px;
@@ -15,6 +29,7 @@
 }
 
 .footer__accent {
+  font-size: 24px;
   font-weight: 900;
 }
 
