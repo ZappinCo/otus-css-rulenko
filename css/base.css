@@ -21,3 +21,9 @@ h2 {
   max-width: 1165px;
   margin: 0 auto;
 }
+
+@media(max-width: 1024px) {
+  .container {
+    padding: 0 16px
+  }
+}

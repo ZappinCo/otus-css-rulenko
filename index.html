@@ -12,12 +12,12 @@
   <header class="header">
     <h1 class="header__title">Mod</h1>
     <nav class="header__navigation">
-      <a href="#biography" class="header__ref">Biography</a>
-      <a href="#designers" class="header__ref">Designers</a>
-      <a href="#testimonials" class="header__ref">Testimonials</a>
-      <a href="#strong-points" class="header__ref">Strong points</a>
+      <a href="#biography" class="header__ref">B<div class="header__hide">iography</div></a>
+      <a href="#designers" class="header__ref">D<div class="header__hide">esigners</div></a>
+      <a href="#testimonials" class="header__ref">T<div class="header__hide">estimonials</div></a>
+      <a href="#strong-points" class="header__ref">S<div class="header__hide">trong points</div></a>
+      <a href="#contacts" class="header__message"><img src="img/icon-message.svg" alt="Message icon"></a>
     </nav>
-    <a href="#contacts" class="header__message"><img src="img/icon-message.svg" alt="Message icon"></a>
   </header>
   <article class="hero-section">
     <!-- <img src="img/inside-weather.jpg" alt="black sofa with flowerpot"> -->
@@ -25,19 +25,33 @@
       <h2 class="hero-section__title">Mod Studio</h2>
       <h3 class="hero-section__subtitle">Modern Web Studio</h3>
     </div>
+    <img src="img/inside-weather.jpg" class="hero-section__background" alt="background">
   </article>
   <section id="biography" class="biography container">
     <img src="img/jared-weiss.jpg" class="biography__image" alt="Jared Weiss">
     <h3 class="biography__header">Biography</h3>
-    <section class="biography__info">
-      <h2 class="biography__subject">Katya<br>Mills</h2>
-      Art Director<br>
-      Scenography / Styling / Creative Photography / Design
-      <hr class="biography__decoration">
-      <q class="biography__quote">The more I deal with the work<br>as something that is my own,<br>as something that is
-        personal,<br>the more
-        successful it is.</q>
-    </section>
+    <h2 class="biography__subject">
+      <div class="biography__subject_decoration">-</div>Katya Mills
+    </h2>
+    <div class=" biography__info">
+      Art Director
+      <ul class="biography__list">
+        <li>Scenography</li>
+        <li>
+          <div class="biography__leaves_decoration">/ </div>Styling
+        </li>
+        <li>
+          <div class="biography__leaves_decoration">/ </div>Creative Photography
+        </li>
+        <li>
+          <div class="biography__leaves_decoration">/ </div>Design
+        </li>
+      </ul>
+    </div>
+    <hr class="biography__decoration">
+    <q class="biography__quote">The more I deal with the work as something that is my own, as something that is
+      personal, the more
+      successful it is.</q>
   </section>
   <section id="designers" class="designers">
     <header>
@@ -94,9 +108,8 @@
     </div>
     <img src="img/keghan-crossland.jpg" class="testimonials__image" alt="coffeeshop">
     <h2 class="testimonials__header">Testimonials</h2>
-    <q class="testimonials__quote">I just really<br>want to do<br>good work<br>and work with<br>some great<br>people,
-      people<br>who
-      challenge<br>me.</q>
+    <q class="testimonials__quote">I just really want to do good work and work with some great people, people who
+      challenge me.</q>
     <img src="img/sinitta-leunen.jpg" class="testimonials__customer-image" alt="bag">
   </section>
   <section id="strong-points" class="strong-points">
@@ -105,10 +118,10 @@
     </header>
     <div class="strong-points__container">
       <article class="strong-points__article">
-        <img src="img/dawid-liberadzki.jpg" alt="Laptop">
+        <img src="img/dawid-liberadzki.jpg" class="strong-points__image" alt="Laptop">
       </article>
       <article class="strong-points__article">
-        <img src="img/avery-klein.jpg" alt="Chair">
+        <img src="img/avery-klein.jpg" class="strong-points__image" alt="Chair">
       </article>
       <article class="strong-points__article  strong-points__article_wide">
         <h2 class="strong-points__subheader">Strengths</h2>
@@ -126,7 +139,10 @@
         </ul>
       </article>
       <article class="strong-points__article">
-        <img src="img/keghan-crossland-small.jpg" alt="coffeeshop">
+        <img src="img/keghan-crossland-small.jpg" class="strong-points__image" alt="coffeeshop">
+      </article>
+      <article class="strong-points__article">
+        <img src="img/avery-klein.jpg" class="strong-points__image" alt="Chair">
       </article>
     </div>
   </section>

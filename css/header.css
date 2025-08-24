@@ -6,6 +6,10 @@
   gap: 20px;
 }
 
+.header__hide {
+  display: inline;
+}
+
 .header__title {
   font-family: "Playfair Display";
   font-size: 86px;
@@ -17,8 +21,15 @@
 
 .header__navigation {
   display: flex;
-  gap: 55px;
   align-items: center;
+}
+
+.header__ref {
+  padding-left: 55px;
+}
+
+.header__message {
+  padding-left: 20px;
 }
 
 .header__ref,
@@ -26,4 +37,40 @@
   font-size: 24px;
   text-decoration: none;
   text-align: center;
+}
+
+@media(max-width: 1024px) {
+  .header {
+    justify-content: center;
+    padding: 0;
+    min-height: 82px;
+    padding-left: 50px;
+    padding-right: 32px;
+  }
+
+  .header__title,
+  .header__hide {
+    display: none;
+  }
+
+  .header__ref {
+    font-family: "Bitter";
+    font-size: 40px;
+  }
+
+  .header__ref:hover {
+    color: #A07C72;
+  }
+
+  .header__navigation {
+    justify-content: space-between;
+    width: 100%;
+    gap: 70px;
+  }
+
+  .header__ref,
+  .header__message {
+    padding: 0;
+  }
+
 }
