@@ -1,32 +1,26 @@
 .biography {
-  display: flex;
-  flex-flow: row wrap;
+  display: grid;
+  grid-template-columns: 49% auto 39%;
+  grid-template-rows: 53% 5% 7% 35%;
   color: #0D0D0D;
   font-size: 18px;
-  justify-content: space-between;
-  margin-top: 150px;
-  margin-bottom: 150px;
+  align-items: stretch;
+  margin-bottom: 154px;
 }
 
 .biography__image {
-  width: 49%;
+  width: 100%;
   object-fit: cover;
 }
 
 .biography__header {
-  writing-mode: tb-rl;
-  align-self: flex-start;
-  transform: rotate(180deg) translateX(-22%);
   font-size: 24px;
   font-weight: 700;
   text-align: right;
   color: #000000;
-  flex-grow: 1;
 }
 
 .biography__info {
-  width: 39%;
-  padding: 15% 0;
   line-height: 115%;
 }
 
@@ -37,7 +31,20 @@
   line-height: 133%;
   color: #000000;
   padding-bottom: 38px;
+  max-width: 100px;
+  margin-top: 178px;
 }
+
+.biography__list {
+  list-style: "/";
+  white-space: nowrap
+}
+
+.biography__list li,
+.biography__leaves_decoration {
+  display: inline;
+}
+
 
 .biography__decoration {
   width: 20px;
@@ -48,9 +55,93 @@
 }
 
 .biography__quote {
-  font-family: "Bitter Regular";
+  font-family: "Bitter";
   font-size: 26px;
   line-height: 120%;
   color: #0D0D0D;
   font-weight: 400;
+}
+
+@media (min-width: 1025px) {
+  .biography__header {
+    writing-mode: tb-rl;
+    align-self: start;
+    transform: rotate(180deg) translateX(-22%);
+  }
+
+  .biography__header,
+  .biography__image {
+    grid-row: 1/-1;
+  }
+
+  .biography__subject_decoration {
+    display: none;
+  }
+
+}
+
+@media(max-width: 1024px) {
+  .biography {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    margin-bottom: 79px;
+  }
+
+  .biography__list {
+    list-style: "-";
+    list-style-position: inside;
+  }
+
+  .biography__subject {
+    max-width: 1000px;
+    font-size: 63px;
+  }
+
+  .biography__list li {
+    display: list-item;
+  }
+
+  .biography__header {
+    font-size: 18px;
+  }
+
+  .biography__decoration,
+  .biography__leaves_decoration {
+    display: none;
+  }
+
+  .biography__subject_decoration {
+    display: inline;
+  }
+
+  .biography__quote {
+    font-size: 30px;
+    font-weight: 300;
+    max-width: 450px;
+    margin-top: 58px;
+  }
+
+  .biography__info {
+    grid-area: 1;
+  }
+
+  .biography__subject {
+    grid-area: 3;
+    margin-top: 125px;
+  }
+
+  .biography__image {
+    grid-area: 4;
+    max-height: 400px;
+  }
+
+  .biography__subject,
+  .biography__image,
+  .biography__quote {
+    grid-column: 1/-1;
+  }
+
+  .biography__hide {
+    display: inline;
+  }
 }
