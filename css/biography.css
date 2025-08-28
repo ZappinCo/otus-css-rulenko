@@ -145,3 +145,13 @@
     display: inline;
   }
 }
+
+@media(max-width: 767px) {
+  .biography__quote {
+    max-width: 339px;
+  }
+
+  .biography__subject {
+    margin-top: 54px;
+  }
+}
