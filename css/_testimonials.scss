@@ -1,0 +1,161 @@
+.testimonials {
+  display: grid;
+  column-gap: 26px;
+  margin-bottom: 150px;
+
+  &__links-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: end;
+    gap: 35px;
+  }
+
+
+  &__links {
+    font-size: $fontSizeS;
+    text-align: left;
+    text-decoration: none;
+    font-weight: 400;
+  }
+
+  &__accent {
+    font-weight: 700;
+  }
+
+  &__image {
+    object-fit: cover;
+    width: 97%;
+  }
+
+  &__header {
+    font-size: $fontSizeL;
+    font-weight: 700;
+    text-align: right;
+    color: #000000;
+  }
+
+  &__quote {
+    @include fontBitter(32px);
+    margin: auto;
+    padding-top: 21px;
+    quotes: none;
+    text-align: center;
+    line-height: 120%;
+    letter-spacing: -1px;
+    max-width: 214px;
+  }
+
+  &__miniature {
+    padding-top: 13px;
+    margin: 0 auto;
+    width: 53%;
+  }
+
+  &__customer-image {
+    object-fit: cover;
+  }
+
+}
+
+@media (min-width: ($laptopWidth + 1px)) {
+  .testimonials {
+    %firstRow {
+      grid-row: 1/3;
+    }
+
+    grid-template-columns: 8% 40% 5% 35%;
+
+    &__links-container {
+      @extend %firstRow;
+    }
+
+    &__links {
+      @include rotate(-8%);
+    }
+
+    &__image {
+      @extend %firstRow;
+    }
+
+    &__header {
+      @extend %firstRow;
+      @include rotate(32%);
+      align-self: start;
+    }
+
+  }
+}
+
+@media(max-width: $laptopWidth) {
+  .testimonials {
+    grid-template-columns: 50% 45%;
+    grid-template-rows: repeat(3, auto);
+    row-gap: 29px;
+    margin-bottom: 81px;
+
+    &__links-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: start;
+      align-items: center;
+      gap: 82px;
+      grid-area: 3;
+      @include allWidth();
+    }
+
+    &__image {
+      display: none;
+    }
+
+    &__header {
+      @include allWidth();
+      font-size: $fontSizeM;
+    }
+
+    &__quote {
+      font-size: 30px;
+      font-weight: 300;
+      height: 100%;
+      padding-top: 27px;
+      max-width: 300px;
+    }
+
+    &__miniature {
+      width: 100%;
+      padding-top: 0;
+    }
+
+    &__customer-image {
+      object-fit: cover;
+      aspect-ratio: 1/1;
+      width: 100%;
+    }
+  }
+}
+
+
+@media (max-width: $mobileWidth) {
+  .testimonials {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    row-gap: 0px;
+    margin-bottom: 81px;
+
+    &__links-container {
+      grid-area: 4;
+      gap: 31px;
+      padding-left: 6px;
+    }
+
+    &__quote {
+      max-width: 310px;
+      margin-bottom: 25px;
+    }
+
+    &__customer-image {
+      aspect-ratio: auto;
+      margin-bottom: 23px;
+    }
+  }
+}

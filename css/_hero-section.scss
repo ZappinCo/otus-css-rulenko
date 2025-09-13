@@ -1,0 +1,72 @@
+.hero-section {
+  min-height: 630px;
+  background-image: image-set("../img/hero-desktop.jpg" 1x, "../img/hero-desktop@2x.jpg" 2x);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 150px;
+  background-size: cover;
+
+  &__logo {
+    background-color: white;
+    padding: 110px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  &__title {
+    @include fontPlayfair(500);
+    text-align: center;
+    min-width: 650px;
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+@media(max-width: $laptopWidth) {
+  .hero-section {
+    justify-content: start;
+    align-items: start;
+    background-image: image-set("../img/hero-tablet.jpg" 1x, "../img/hero-tablet@2x.jpg" 2x);
+    margin-bottom: 83px;
+    min-height: 683px;
+
+    &__logo {
+      height: 50%;
+      width: 100%;
+      padding: 83px 0 106px;
+    }
+
+    &__title {
+      font-size: 70px;
+      min-width: 100%
+    }
+
+    &__subtitle {
+      font-size: $fontSizeM;
+    }
+  }
+
+}
+
+@media (max-width: $mobileWidth) {
+
+  .hero-section {
+    background-image: image-set("../img/hero-mobile.jpg" 1x, "../img/hero-mobile@2x.jpg" 2x);
+
+    &__logo {
+      height: 50%;
+      width: 100%;
+      padding: 84px 0 103px;
+    }
+
+    &__title {
+      font-size: 70px;
+      width: 100%;
+    }
+  }
+}

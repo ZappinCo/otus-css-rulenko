@@ -1,0 +1,25 @@
+@mixin fontPlayfair($weight) {
+  font-family: "Playfair Display";
+  font-size: 86px;
+  line-height: 120%;
+  letter-spacing: 0px;
+  font-weight: $weight;
+}
+
+@mixin fontBitter($size) {
+  font-family: "Bitter";
+  font-size: $size;
+}
+
+@mixin allHeight() {
+  grid-row: 1/-1;
+}
+
+@mixin allWidth() {
+  grid-column: 1/-1;
+}
+
+@mixin rotate($translateX) {
+  writing-mode: tb-rl;
+  transform: rotate(180deg) translateX($translateX);
+}

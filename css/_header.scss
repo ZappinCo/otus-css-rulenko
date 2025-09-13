@@ -1,0 +1,83 @@
+  %buttons {
+    font-size: $fontSizeL;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .header {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 1% 20px;
+    gap: 20px;
+
+    &__title {
+      @include fontPlayfair(600);
+      flex-grow: 1;
+    }
+
+    &__navigation {
+      display: flex;
+      align-items: center;
+    }
+
+    &__ref {
+      @extend %buttons;
+      padding-left: 55px;
+    }
+
+    &__message {
+      @extend %buttons;
+      padding-left: 20px;
+    }
+
+    &__hide {
+      display: inline;
+    }
+
+  }
+
+
+
+  @media(max-width: $laptopWidth) {
+    .header {
+      justify-content: center;
+      padding: 0;
+      min-height: 82px;
+      padding-left: 50px;
+      padding-right: 32px;
+
+      &__title,
+      &__hide {
+        display: none;
+      }
+
+      &__ref {
+        @include fontBitter(40px);
+      }
+
+      &__ref:hover {
+        color: #A07C72;
+      }
+
+      &__navigation {
+        justify-content: space-between;
+        width: 100%;
+        gap: 70px;
+      }
+
+      &__ref,
+      &__message {
+        padding: 0;
+      }
+    }
+  }
+
+
+  @media (max-width:($mobileWidth + 1px)) {
+    .header {
+      &__navigation {
+        gap: 10px;
+      }
+    }
+  }
