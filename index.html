@@ -25,7 +25,6 @@
       <h2 class="hero-section__title">Mod Studio</h2>
       <h3 class="hero-section__subtitle">Modern Web Studio</h3>
     </div>
-    <img src="img/inside-weather.jpg" class="hero-section__background" alt="background">
   </article>
   <section id="biography" class="biography container">
     <img src="img/jared-weiss.jpg" class="biography__image" alt="Jared Weiss">
@@ -60,7 +59,10 @@
     <div class="designers__container">
 
       <figure class="designers__card">
-        <img src="img/jess-wonder.jpg" class="designers__image" alt="Jess Wonder">
+        <picture>
+          <source srcset="img/jess-wonder-crop.jpg" media="(max-width: 1024px)">
+          <img src="img/jess-wonder.jpg" class="designers__image" alt="Jess Wonder">
+        </picture>
         <figcaption class="designers__text designers__big-image">
           <h3 class="designers__subheader">JESS WONDER</h3>
           <span class="designers__accent">From/</span> Be more flower
@@ -110,7 +112,11 @@
     <h2 class="testimonials__header">Testimonials</h2>
     <q class="testimonials__quote">I just really want to do good work and work with some great people, people who
       challenge me.</q>
-    <img src="img/sinitta-leunen.jpg" class="testimonials__customer-image" alt="bag">
+    <picture class = "testimonials__customer-image_container">
+      <source srcset="img/sinitta-leunen-mobile.jpg" media="(max-width: 767px)">
+      <img src="img/sinitta-leunen.jpg" class="testimonials__customer-image" alt="bag">
+    </picture>
+
   </section>
   <section id="strong-points" class="strong-points">
     <header>
