@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body id="body">
   <header class="header">
     <h1 class="header__title">Mod</h1>
     <nav class="header__navigation">
@@ -16,7 +16,7 @@
       <a href="#designers" class="header__ref">D<div class="header__hide">esigners</div></a>
       <a href="#testimonials" class="header__ref">T<div class="header__hide">estimonials</div></a>
       <a href="#strong-points" class="header__ref">S<div class="header__hide">trong points</div></a>
-      <a href="#contacts" class="header__message"><img src="img/icon-message.svg" alt="Message icon"></a>
+      <a class="header__message" id="contactButton"><img src="img/icon-message.svg" alt="Message icon"></a>
     </nav>
   </header>
   <article class="hero-section">
@@ -164,6 +164,24 @@
       © 2023 Mod Media. All rights reserved
     </div>
   </footer>
+  <div class="modal hidden" id="modal">
+    <div class="callback">
+      <h2 class="callback__header">Get in touch</h2>
+      <p class="callback__text">Do you have any questions? Have something to say?
+        Don't be shy, write to us:</p>
+      <h3 class="callback__label">Name</h3>
+      <input type="text" name="callback__name">
+      <h3 class="callback__label">E-mail</h3>
+      <input type="email" name="callback__email">
+      <h3 class="callback__label">E-mail</h3>
+      <textarea type="text" name="callback_text"></textarea>
+      <div class="callback__buttons-container">
+        <button class="callback__reject" id="reject">Cancel</button>
+        <button class="callback__accept" id="sendInfo">Send</button>
+      </div>
+    </div>
+  </div>
+  <script src="script/script.js"></script>
 </body>
 
 </html>
