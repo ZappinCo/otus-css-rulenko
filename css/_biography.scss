@@ -1,0 +1,156 @@
+.biography {
+  display: grid;
+  grid-template-columns: 49% auto 39%;
+  grid-template-rows: 53% 5% 7% 35%;
+  color: #0D0D0D;
+  font-size: $fontSizeM;
+  align-items: stretch;
+  margin-bottom: 154px;
+
+  &__image {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__header {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: right;
+    color: #000000;
+  }
+
+
+  &__subject {
+    @include fontPlayfair(500);
+    line-height: 133%;
+    color: #000000;
+    padding-bottom: 38px;
+    max-width: 100px;
+    margin-top: 178px;
+  }
+
+  &__info {
+    line-height: 115%;
+  }
+
+  &__list {
+    list-style: "/";
+    white-space: nowrap
+  }
+
+  &__list li,
+  &__bullet {
+    display: inline;
+  }
+
+
+  &__decoration {
+    width: 20px;
+    height: 6px;
+    background-color: #0D0D0D;
+    border: none;
+    margin: 35px 0 18px 0;
+  }
+
+  &__quote {
+    @include fontBitter(26px);
+    line-height: 120%;
+    color: #0D0D0D;
+    font-weight: 400;
+  }
+}
+
+
+@media (min-width: ($laptopWidth + 1px)) {
+  .biography {
+    &__image {
+      @include allHeight();
+    }
+
+    &__header {
+      @include rotate(-22%);
+      align-self: start;
+      @include allHeight();
+    }
+
+    &__dash {
+      display: none;
+    }
+  }
+}
+
+@media(max-width: $laptopWidth) {
+  .biography {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    margin-bottom: 79px;
+
+
+    &__image {
+      grid-area: 4;
+      max-height: 400px;
+      @include allWidth();
+    }
+
+    &__header {
+      font-size: $fontSizeM;
+    }
+
+    &__subject {
+      max-width: 1000px;
+      font-size: 63px;
+      grid-area: 3;
+      margin-top: 125px;
+      @include allWidth();
+    }
+
+
+    &__dash {
+      display: inline;
+    }
+
+    &__info {
+      grid-area: 1;
+    }
+
+    &__list {
+      list-style: "-";
+      list-style-position: inside;
+
+      li {
+        display: list-item;
+      }
+    }
+
+
+    &__decoration,
+    &__bullet {
+      display: none;
+    }
+
+    &__quote {
+      font-size: 30px;
+      font-weight: 300;
+      max-width: 450px;
+      margin-top: 58px;
+      @include allWidth();
+    }
+
+    &__hide {
+      display: inline;
+    }
+  }
+}
+
+@media(max-width: $mobileWidth) {
+
+  .biography {
+    &__subject {
+      margin-top: 54px;
+    }
+
+    &__quote {
+      max-width: 339px;
+    }
+  }
+}
