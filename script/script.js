@@ -1,7 +1,7 @@
 
 document.getElementById('contactButton').onclick = toggleModal;
 document.getElementById('reject').onclick = toggleModal;
-document.getElementById('sendInfo').onclick = toggleModal;
+document.getElementById('get-in-touch').addEventListener('submit', toggleModal);
 
 function toggleModal() {
   const element = document.getElementById('modal');
