@@ -23,3 +23,10 @@
   writing-mode: tb-rl;
   transform: rotate(180deg) translateX($translateX);
 }
+
+@mixin addBorder() {
+  border: 1px solid #B3B3B3;
+  background: #fff;
+  border-radius: 8px;
+  min-height: 54px;
+}

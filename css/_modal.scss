@@ -8,25 +8,87 @@
 }
 
 .callback {
+  max-width: 440px;
+  min-height: 533px;
   background: #fff;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   padding: 20px;
+  border-radius: 10px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+    z-index: -1;
+    transform: rotate(1.9deg);
+    top: -5px;
+    left: 0px;
+  }
+
+  &__header {
+    font-weight: 700;
+    font-size: 24px;
+    padding-bottom: 10px;
+  }
 
   &__label {
     padding-top: 10px;
+    padding-bottom: 5px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  &__question {
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  &__name {
+    @include addBorder();
+  }
+
+  &__email {
+    @include addBorder();
   }
 
   &__text {
+    @include addBorder();
     resize: none;
+    min-height: 115px;
   }
 
   &__buttons-container {
     padding-top: 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
   }
+
+  &__reject {
+    @include addBorder();
+    width: 49%;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  &__accept {
+    @include addBorder();
+    width: 49%;
+    background: #000000;
+    color: #FFFFFF;
+    font-size: 18px;
+  }
+
+  &__accept-decoration {
+    padding-right: 10px;
+  }
+
 }
 
 
