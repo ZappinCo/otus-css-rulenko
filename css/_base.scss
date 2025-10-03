@@ -11,7 +11,7 @@ nav,
 section,
 a,
 h2 {
-  color: #000000;
+  color: $baseColor;
   font-family: "Roboto";
   font-weight: 500;
   text-align: left;
@@ -22,11 +22,41 @@ h2 {
   margin: 0 auto;
 }
 
+
+
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
 .disable-scroll {
   overflow: hidden;
 }
 
-@media(max-width: 1024px) {
+.colored-link {
+  font-size: $fontSizeL;
+  text-decoration: none;
+  text-align: center;
+  outline-color: transparent;
+  transition: color 0.4s, outline-color 0.5s;
+
+  &:hover {
+    color: $hoverColor;
+  }
+
+  &:active {
+    color: $activeColor;
+  }
+
+  &:focus {
+    color: $hoverColor;
+    border-radius: 10px;
+    outline: 1.5px solid $activeColor;
+    outline-offset: 5px;
+  }
+}
+
+@media(max-width: $laptopWidth) {
   .container {
     padding: 0 16px
   }

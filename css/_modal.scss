@@ -5,6 +5,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.4s, visibility 0.6s;
+}
+
+.modal[visible="hidden"] {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal[visible="visible"] .callback::before {
+  transform: rotate(1.9deg);
 }
 
 .callback {
@@ -23,12 +35,12 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    border: 2px solid #FFFFFF;
+    border: 2px solid $baseBackgroundColor;
     border-radius: 10px;
     z-index: -1;
-    transform: rotate(1.9deg);
     top: -5px;
     left: 0px;
+    transition: transform 1.0s cubic-bezier(0.3, 2.3, 0.3, 2.3);
   }
 
   &__header {
@@ -82,6 +94,7 @@
   &__email+svg,
   &__text+svg {
     fill: #868686;
+    transition: fill 0.4s;
   }
 
 
@@ -98,34 +111,34 @@
   &__email:hover,
   &__text:hover {
     background: #EDEDED;
-    border-color: #B3B3B3;
+    border-color: $borderFocusColor;
   }
 
 
   &__name:hover+svg,
   &__email:hover+svg,
   &__text:hover+svg {
-    fill: #000000;
+    fill: $baseColor;
   }
 
   &__name:active,
   &__email:active,
   &__text:active {
-    background: #FFFFFF;
-    border-color: #000000;
+    background: $baseBackgroundColor;
+    border-color: $baseColor;
   }
 
   &__name:focus,
   &__email:focus,
   &__text:focus {
-    border-color: #E0B59F;
+    border-color: $activeColor;
     outline: none;
   }
 
   &__name:focus+svg,
   &__email:focus+svg,
   &__text:focus+svg {
-    fill: #A07C72;
+    fill: $hoverColor;
   }
 
 
@@ -150,49 +163,49 @@
 
   &__reject:active {
     border: 1.32px solid #EAC8B7;
-    background: #E0B59F;
+    background: $activeColor;
   }
 
   &__reject:focus {
-    border: 1.5px solid #B3B3B3;
-    color: #A07C72;
-    outline: 1.5px solid #E0B59F;
+    border: 1.5px solid $borderFocusColor;
+    color: $hoverColor;
+    outline: 1.5px solid $activeColor;
     outline-offset: 3px;
   }
 
   &__reject:disabled {
-    border: 1.32px solid #CCCCCC;
-    background: #FFFFFF;
-    color: #CCCCCC
+    border: 1.32px solid $borderColor;
+    background: $baseBackgroundColor;
+    color: $borderColor
   }
 
   &__accept {
     @include addBorder();
     width: 49%;
-    background: #000000;
-    border-color: #000000;
-    color: #FFFFFF;
+    background: $baseColor;
+    border-color: $baseColor;
+    color: $baseBackgroundColor;
     font-size: 18px;
   }
 
   &__accept:hover {
-    background: #A07C72;
-    border-color: #A07C72;
+    background: $hoverColor;
+    border-color: $hoverColor;
   }
 
   &__accept:active {
-    background: #E0B59F;
-    border-color: #E0B59F;
+    background: $activeColor;
+    border-color: $activeColor;
   }
 
   &__accept:focus {
-    outline: 1.5px solid #E0B59F;
+    outline: 1.5px solid $activeColor;
     outline-offset: 3px;
   }
 
   &__accept:disabled {
-    background: #CCCCCC;
-    border-color: #CCCCCC;
+    background: $borderColor;
+    border-color: $borderColor;
   }
 
 
@@ -202,7 +215,7 @@
 
 }
 
-
 .hidden {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
