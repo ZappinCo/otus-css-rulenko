@@ -1,6 +1,6 @@
 .footer {
-  background-color: #0D0D0D;
-  color: #ffffff;
+  background-color: $secondaryColor;
+  color: $baseBackgroundColor;
   font-size: $fontSizeS;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -16,7 +16,7 @@
   }
 
   &__contacts {
-    color: #ffffff;
+    color: $baseBackgroundColor;
     font-weight: 400;
     line-height: 26px;
   }

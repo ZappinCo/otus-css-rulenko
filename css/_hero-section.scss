@@ -8,7 +8,7 @@
   background-size: cover;
 
   &__logo {
-    background-color: white;
+    background-color: $baseBackgroundColor;
     padding: 110px 20px;
     display: flex;
     flex-direction: column;

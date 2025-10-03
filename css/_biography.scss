@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 49% auto 39%;
   grid-template-rows: 53% 5% 7% 35%;
-  color: #0D0D0D;
+  color: $secondaryColor;
   font-size: $fontSizeM;
   align-items: stretch;
   margin-bottom: 154px;
@@ -16,14 +16,14 @@
     font-size: 24px;
     font-weight: 700;
     text-align: right;
-    color: #000000;
+    color: $baseColor;
   }
 
 
   &__subject {
     @include fontPlayfair(500);
     line-height: 133%;
-    color: #000000;
+    color: $baseColor;
     padding-bottom: 38px;
     max-width: 100px;
     margin-top: 178px;
@@ -47,7 +47,7 @@
   &__decoration {
     width: 20px;
     height: 6px;
-    background-color: #0D0D0D;
+    background-color: $secondaryColor;
     border: none;
     margin: 35px 0 18px 0;
   }
@@ -55,7 +55,7 @@
   &__quote {
     @include fontBitter(26px);
     line-height: 120%;
-    color: #0D0D0D;
+    color: $secondaryColor;
     font-weight: 400;
   }
 }

@@ -5,9 +5,15 @@ document.getElementById('get-in-touch').addEventListener('submit', toggleModal);
 
 function toggleModal() {
   const element = document.getElementById('modal');
-  element.classList.toggle('hidden');
+  // element.classList.toggle('hidden');
 
-  const body = document.getElementById('body');
-  body.classList.toggle('disable-scroll');
+  if (element.getAttribute("visible") == "hidden")
+    element.setAttribute("visible", "visible");
+  else
+    element.setAttribute("visible", "hidden");
+
+
+  const html = document.getElementById('html');
+  html.classList.toggle('disable-scroll');
 }
 
