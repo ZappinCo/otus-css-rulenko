@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -167,17 +168,19 @@
   <div class="modal hidden" id="modal">
     <form class="callback" method="get" id="get-in-touch">
       <h2 class="callback__header">Get in touch</h2>
-      <p class="callback__text">Do you have any questions? Have something to say?
+      <p class="callback__question">Do you have any questions? Have something to say?
         Don't be shy, write to us:</p>
       <label for="callback__name" class="callback__label">Name</label>
-      <input type="text" class="callback__name" id="callback__name" name="name" required>
+      <input type="text" class="callback__name" id="callback__name" name="name" placeholder="3+ Characters" required>
       <label for="callback__email" class="callback__label">E-mail</label>
-      <input type="email" class="callback__email" id="callback__email" name="email" required>
+      <input type="email" class="callback__email" id="callback__email" name="email" placeholder="name@email.com"
+        required>
       <label for="callback_text" class="callback__label">E-mail</label>
-      <textarea class="callback__text" id="callback__text" name="text"></textarea>
+      <textarea class="callback__text" id="callback__text" name="text" placeholder="name@email.com"></textarea>
       <div class="callback__buttons-container">
         <button class="callback__reject" id="reject" type="reset">Cancel</button>
-        <button class="callback__accept" id="sendInfo" type="submit">Send</button>
+        <button class="callback__accept" id="sendInfo" type="submit"><i
+            class=" callback__accept-decoration fa-solid fa-plus"></i>Send</button>
       </div>
     </form>
   </div>
