@@ -1022,32 +1022,104 @@ h2 {
   font-weight: 600;
 }
 
+.callback__input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.callback__input-container svg {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 10px;
+  top: 20px;
+}
+
 .callback__question {
   font-weight: 400;
   font-size: 18px;
 }
 
-.callback__name {
+.callback__name, .callback__text, .callback__email {
   border: 1px solid #B3B3B3;
   background: #fff;
   border-radius: 8px;
   min-height: 54px;
-}
-
-.callback__email {
-  border: 1px solid #B3B3B3;
-  background: #fff;
-  border-radius: 8px;
-  min-height: 54px;
+  padding: 6px 10px;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .callback__text {
-  border: 1px solid #B3B3B3;
-  background: #fff;
-  border-radius: 8px;
-  min-height: 54px;
   resize: none;
   min-height: 115px;
+}
+
+.callback__name + svg, .callback__text + svg,
+.callback__email + svg,
+.callback__text + svg {
+  fill: #868686;
+}
+
+.callback__name::-webkit-input-placeholder, .callback__text::-webkit-input-placeholder, .callback__email::-webkit-input-placeholder, .callback__text::-webkit-input-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.callback__name:-ms-input-placeholder, .callback__text:-ms-input-placeholder, .callback__email:-ms-input-placeholder, .callback__text:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.callback__name::-ms-input-placeholder, .callback__text::-ms-input-placeholder, .callback__email::-ms-input-placeholder, .callback__text::-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.callback__name::placeholder, .callback__text::placeholder, .callback__email::placeholder, .callback__text::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.callback__name:hover, .callback__text:hover, .callback__email:hover, .callback__text:hover {
+  background: #EDEDED;
+  border-color: #B3B3B3;
+}
+
+.callback__name:hover + svg, .callback__text:hover + svg,
+.callback__email:hover + svg,
+.callback__text:hover + svg {
+  fill: #000000;
+}
+
+.callback__name:active, .callback__text:active, .callback__email:active, .callback__text:active {
+  background: #FFFFFF;
+  border-color: #000000;
+}
+
+.callback__name:focus, .callback__text:focus, .callback__email:focus, .callback__text:focus {
+  border-color: #E0B59F;
+  outline: none;
+}
+
+.callback__name:focus + svg, .callback__text:focus + svg,
+.callback__email:focus + svg,
+.callback__text:focus + svg {
+  fill: #A07C72;
 }
 
 .callback__buttons-container {
@@ -1073,6 +1145,29 @@ h2 {
   font-weight: 600;
 }
 
+.callback__reject:hover {
+  border: 1.32px solid #ECC5B2;
+  background: #F5E0D6;
+}
+
+.callback__reject:active {
+  border: 1.32px solid #EAC8B7;
+  background: #E0B59F;
+}
+
+.callback__reject:focus {
+  border: 1.5px solid #B3B3B3;
+  color: #A07C72;
+  outline: 1.5px solid #E0B59F;
+  outline-offset: 3px;
+}
+
+.callback__reject:disabled {
+  border: 1.32px solid #CCCCCC;
+  background: #FFFFFF;
+  color: #CCCCCC;
+}
+
 .callback__accept {
   border: 1px solid #B3B3B3;
   background: #fff;
@@ -1080,8 +1175,29 @@ h2 {
   min-height: 54px;
   width: 49%;
   background: #000000;
+  border-color: #000000;
   color: #FFFFFF;
   font-size: 18px;
+}
+
+.callback__accept:hover {
+  background: #A07C72;
+  border-color: #A07C72;
+}
+
+.callback__accept:active {
+  background: #E0B59F;
+  border-color: #E0B59F;
+}
+
+.callback__accept:focus {
+  outline: 1.5px solid #E0B59F;
+  outline-offset: 3px;
+}
+
+.callback__accept:disabled {
+  background: #CCCCCC;
+  border-color: #CCCCCC;
 }
 
 .callback__accept-decoration {

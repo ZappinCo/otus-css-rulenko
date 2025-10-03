@@ -44,24 +44,90 @@
     font-weight: 600;
   }
 
+  &__input-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &__input-container svg {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 10px;
+    top: 20px;
+  }
+
+
   &__question {
     font-weight: 400;
     font-size: 18px;
   }
 
-  &__name {
-    @include addBorder();
-  }
-
+  &__name,
   &__email {
     @include addBorder();
+    padding: 6px 10px;
+    font-weight: 500;
+    font-size: 16px;
   }
 
   &__text {
-    @include addBorder();
+    @extend .callback__name;
     resize: none;
     min-height: 115px;
   }
+
+  &__name+svg,
+  &__email+svg,
+  &__text+svg {
+    fill: #868686;
+  }
+
+
+  &__name::placeholder,
+  &__email::placeholder,
+  &__text::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  &__name:hover,
+  &__email:hover,
+  &__text:hover {
+    background: #EDEDED;
+    border-color: #B3B3B3;
+  }
+
+
+  &__name:hover+svg,
+  &__email:hover+svg,
+  &__text:hover+svg {
+    fill: #000000;
+  }
+
+  &__name:active,
+  &__email:active,
+  &__text:active {
+    background: #FFFFFF;
+    border-color: #000000;
+  }
+
+  &__name:focus,
+  &__email:focus,
+  &__text:focus {
+    border-color: #E0B59F;
+    outline: none;
+  }
+
+  &__name:focus+svg,
+  &__email:focus+svg,
+  &__text:focus+svg {
+    fill: #A07C72;
+  }
+
 
   &__buttons-container {
     padding-top: 20px;
@@ -77,13 +143,58 @@
     font-weight: 600;
   }
 
+  &__reject:hover {
+    border: 1.32px solid #ECC5B2;
+    background: #F5E0D6;
+  }
+
+  &__reject:active {
+    border: 1.32px solid #EAC8B7;
+    background: #E0B59F;
+  }
+
+  &__reject:focus {
+    border: 1.5px solid #B3B3B3;
+    color: #A07C72;
+    outline: 1.5px solid #E0B59F;
+    outline-offset: 3px;
+  }
+
+  &__reject:disabled {
+    border: 1.32px solid #CCCCCC;
+    background: #FFFFFF;
+    color: #CCCCCC
+  }
+
   &__accept {
     @include addBorder();
     width: 49%;
     background: #000000;
+    border-color: #000000;
     color: #FFFFFF;
     font-size: 18px;
   }
+
+  &__accept:hover {
+    background: #A07C72;
+    border-color: #A07C72;
+  }
+
+  &__accept:active {
+    background: #E0B59F;
+    border-color: #E0B59F;
+  }
+
+  &__accept:focus {
+    outline: 1.5px solid #E0B59F;
+    outline-offset: 3px;
+  }
+
+  &__accept:disabled {
+    background: #CCCCCC;
+    border-color: #CCCCCC;
+  }
+
 
   &__accept-decoration {
     padding-right: 10px;
