@@ -54,9 +54,10 @@
 
   &__quote {
     @include fontBitter(26px);
-    line-height: 120%;
+    line-height: 119%;
     color: $secondaryColor;
-    font-weight: 400;
+    font-weight: 300;
+    max-width: 82%;
   }
 }
 
@@ -74,6 +75,10 @@
     }
 
     &__dash {
+      display: none;
+    }
+
+    &__new-line {
       display: none;
     }
   }
@@ -131,7 +136,7 @@
     &__quote {
       font-size: 30px;
       font-weight: 300;
-      max-width: 450px;
+      max-width: 100%;
       margin-top: 58px;
       @include allWidth();
     }
@@ -150,7 +155,7 @@
     }
 
     &__quote {
-      max-width: 339px;
+      max-width: 100%;
     }
   }
 }

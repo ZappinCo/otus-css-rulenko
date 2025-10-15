@@ -84,6 +84,9 @@
       align-self: start;
     }
 
+    &__new-line {
+      display: none;
+    }
   }
 }
 
@@ -117,8 +120,10 @@
       font-size: 30px;
       font-weight: 300;
       height: 100%;
-      padding-top: 27px;
-      max-width: 300px;
+      padding-top: 29px;
+      max-width: 96%;
+      margin-left: 0%;
+      letter-spacing: normal;
     }
 
     &__miniature {
@@ -149,8 +154,13 @@
     }
 
     &__quote {
-      max-width: 310px;
+      max-width: 82%;
+      margin: auto;
       margin-bottom: 25px;
+    }
+
+    &__new-line {
+      display: none;
     }
 
     &__customer-image {

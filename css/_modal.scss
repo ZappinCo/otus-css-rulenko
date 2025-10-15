@@ -5,14 +5,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 1;
-  visibility: visible;
+  opacity: 0;
+  visibility: hidden;
   transition: opacity 0.4s, visibility 0.6s;
 }
 
-.modal[visible="hidden"] {
-  opacity: 0;
-  visibility: hidden;
+.modal[visible="visible"] {
+  opacity: 1;
+  visibility: visible;
 }
 
 .modal[visible="visible"] .callback::before {
@@ -104,7 +104,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0px;
   }
 
   &__name:hover,
@@ -213,9 +213,4 @@
     padding-right: 10px;
   }
 
-}
-
-.hidden {
-  opacity: 0;
-  visibility: hidden;
 }

@@ -5,12 +5,11 @@ document.getElementById('get-in-touch').addEventListener('submit', toggleModal);
 
 function toggleModal() {
   const element = document.getElementById('modal');
-  // element.classList.toggle('hidden');
 
-  if (element.getAttribute("visible") == "hidden")
-    element.setAttribute("visible", "visible");
-  else
+  if (element.getAttribute("visible") == "visible")
     element.setAttribute("visible", "hidden");
+  else
+    element.setAttribute("visible", "visible");
 
 
   const html = document.getElementById('html');
