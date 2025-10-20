@@ -195,20 +195,43 @@ h2 {
   margin: 0 auto;
 }
 
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
 .disable-scroll {
   overflow: hidden;
+}
+
+.colored-link {
+  font-size: 24px;
+  text-decoration: none;
+  text-align: center;
+  outline-color: transparent;
+  -webkit-transition: color 0.4s, outline-color 0.5s;
+  transition: color 0.4s, outline-color 0.5s;
+}
+
+.colored-link:hover {
+  color: #A07C72;
+}
+
+.colored-link:active {
+  color: #E0B59F;
+}
+
+.colored-link:focus {
+  color: #A07C72;
+  border-radius: 10px;
+  outline: 1.5px solid #E0B59F;
+  outline-offset: 5px;
 }
 
 @media (max-width: 1024px) {
   .container {
     padding: 0 16px;
   }
-}
-
-.header__ref, .header__message {
-  font-size: 24px;
-  text-decoration: none;
-  text-align: center;
 }
 
 .header {
@@ -246,11 +269,32 @@ h2 {
 }
 
 .header__ref {
-  padding-left: 55px;
+  margin-left: 55px;
 }
 
 .header__message {
   padding-left: 20px;
+}
+
+.header__message svg {
+  -webkit-transition: fill 0.4s;
+  transition: fill 0.4s;
+  fill: #000000;
+}
+
+.header__message:hover svg {
+  fill: #A07C72;
+}
+
+.header__message:active svg {
+  fill: #E0B59F;
+}
+
+.header__message:focus svg {
+  fill: #A07C72;
+  border-radius: 10px;
+  outline: 1.5px solid #E0B59F;
+  outline-offset: 5px;
 }
 
 .header__hide {
@@ -313,7 +357,7 @@ h2 {
 }
 
 .hero-section__logo {
-  background-color: white;
+  background-color: #FFFFFF;
   padding: 110px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -888,7 +932,7 @@ h2 {
 
 .footer {
   background-color: #0D0D0D;
-  color: #ffffff;
+  color: #FFFFFF;
   font-size: 16px;
   display: -ms-grid;
   display: grid;
@@ -918,7 +962,7 @@ h2 {
 }
 
 .footer__contacts {
-  color: #ffffff;
+  color: #FFFFFF;
   font-weight: 400;
   line-height: 26px;
 }
@@ -975,6 +1019,20 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.4s, visibility 0.6s;
+  transition: opacity 0.4s, visibility 0.6s;
+}
+
+.modal[visible="hidden"] {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal[visible="visible"] .callback::before {
+  -webkit-transform: rotate(1.9deg);
+          transform: rotate(1.9deg);
 }
 
 .callback {
@@ -1003,10 +1061,12 @@ h2 {
   border: 2px solid #FFFFFF;
   border-radius: 10px;
   z-index: -1;
-  -webkit-transform: rotate(1.9deg);
-          transform: rotate(1.9deg);
   top: -5px;
   left: 0px;
+  -webkit-transition: -webkit-transform 1s cubic-bezier(0.3, 2.3, 0.3, 2.3);
+  transition: -webkit-transform 1s cubic-bezier(0.3, 2.3, 0.3, 2.3);
+  transition: transform 1s cubic-bezier(0.3, 2.3, 0.3, 2.3);
+  transition: transform 1s cubic-bezier(0.3, 2.3, 0.3, 2.3), -webkit-transform 1s cubic-bezier(0.3, 2.3, 0.3, 2.3);
 }
 
 .callback__header {
@@ -1051,6 +1111,9 @@ h2 {
   background: #fff;
   border-radius: 8px;
   min-height: 54px;
+  outline-color: transparent;
+  -webkit-transition: color 0.4s, outline-color 0.5s, background 0.8s;
+  transition: color 0.4s, outline-color 0.5s, background 0.8s;
   padding: 6px 10px;
   font-weight: 500;
   font-size: 16px;
@@ -1065,6 +1128,8 @@ h2 {
 .callback__email + svg,
 .callback__text + svg {
   fill: #868686;
+  -webkit-transition: fill 0.4s;
+  transition: fill 0.4s;
 }
 
 .callback__name::-webkit-input-placeholder, .callback__text::-webkit-input-placeholder, .callback__email::-webkit-input-placeholder, .callback__text::-webkit-input-placeholder {
@@ -1140,6 +1205,9 @@ h2 {
   background: #fff;
   border-radius: 8px;
   min-height: 54px;
+  outline-color: transparent;
+  -webkit-transition: color 0.4s, outline-color 0.5s, background 0.8s;
+  transition: color 0.4s, outline-color 0.5s, background 0.8s;
   width: 49%;
   font-size: 18px;
   font-weight: 600;
@@ -1173,6 +1241,9 @@ h2 {
   background: #fff;
   border-radius: 8px;
   min-height: 54px;
+  outline-color: transparent;
+  -webkit-transition: color 0.4s, outline-color 0.5s, background 0.8s;
+  transition: color 0.4s, outline-color 0.5s, background 0.8s;
   width: 49%;
   background: #000000;
   border-color: #000000;
@@ -1205,6 +1276,7 @@ h2 {
 }
 
 .hidden {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 /*# sourceMappingURL=style.css.map */
