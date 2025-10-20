@@ -195,6 +195,11 @@ h2 {
   margin: 0 auto;
 }
 
+.container-big {
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
 html {
   overflow-y: scroll;
   scroll-behavior: smooth;
@@ -317,6 +322,7 @@ html {
   .header__ref {
     font-family: "Bitter";
     font-size: 40px;
+    margin-left: 0px;
   }
   .header__ref:hover {
     color: #A07C72;
@@ -492,9 +498,10 @@ html {
 .biography__quote {
   font-family: "Bitter";
   font-size: 26px;
-  line-height: 120%;
+  line-height: 119%;
   color: #0D0D0D;
-  font-weight: 400;
+  font-weight: 300;
+  max-width: 82%;
 }
 
 @media (min-width: 1025px) {
@@ -502,9 +509,9 @@ html {
     grid-row: 1/-1;
   }
   .biography__header {
-    -webkit-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
         -ms-writing-mode: tb-rl;
-            writing-mode: tb-rl;
+            writing-mode: vertical-rl;
     -webkit-transform: rotate(180deg) translateX(-22%);
             transform: rotate(180deg) translateX(-22%);
     -ms-flex-item-align: start;
@@ -513,6 +520,9 @@ html {
     grid-row: 1/-1;
   }
   .biography__dash {
+    display: none;
+  }
+  .biography__new-line {
     display: none;
   }
 }
@@ -562,7 +572,7 @@ html {
   .biography__quote {
     font-size: 30px;
     font-weight: 300;
-    max-width: 450px;
+    max-width: 100%;
     margin-top: 58px;
     grid-column: 1/-1;
   }
@@ -576,7 +586,7 @@ html {
     margin-top: 54px;
   }
   .biography__quote {
-    max-width: 339px;
+    max-width: 100%;
   }
 }
 
@@ -732,21 +742,24 @@ html {
     grid-row: 1/3;
   }
   .testimonials__links {
-    -webkit-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
         -ms-writing-mode: tb-rl;
-            writing-mode: tb-rl;
+            writing-mode: vertical-rl;
     -webkit-transform: rotate(180deg) translateX(-8%);
             transform: rotate(180deg) translateX(-8%);
   }
   .testimonials__header {
-    -webkit-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
         -ms-writing-mode: tb-rl;
-            writing-mode: tb-rl;
+            writing-mode: vertical-rl;
     -webkit-transform: rotate(180deg) translateX(32%);
             transform: rotate(180deg) translateX(32%);
     -ms-flex-item-align: start;
         -ms-grid-row-align: start;
         align-self: start;
+  }
+  .testimonials__new-line {
+    display: none;
   }
 }
 
@@ -788,8 +801,10 @@ html {
     font-size: 30px;
     font-weight: 300;
     height: 100%;
-    padding-top: 27px;
-    max-width: 300px;
+    padding-top: 29px;
+    max-width: 96%;
+    margin-left: 0%;
+    letter-spacing: normal;
   }
   .testimonials__miniature {
     width: 100%;
@@ -819,8 +834,12 @@ html {
     padding-left: 6px;
   }
   .testimonials__quote {
-    max-width: 310px;
+    max-width: 82%;
+    margin: auto;
     margin-bottom: 25px;
+  }
+  .testimonials__new-line {
+    display: none;
   }
   .testimonials__customer-image {
     aspect-ratio: auto;
@@ -852,12 +871,12 @@ html {
           align-items: start;
 }
 
-.strong-points__article {
+.strong-points__figure {
   margin-bottom: 20px;
   margin-left: 20px;
 }
 
-.strong-points__article_wide {
+.strong-points__figure_wide {
   min-width: 450px;
 }
 
@@ -868,7 +887,8 @@ html {
   letter-spacing: 0px;
   font-weight: 500;
   color: #000000;
-  margin-bottom: 30px;
+  margin-top: -4px;
+  margin-bottom: 14px;
   text-align: center;
 }
 
@@ -903,12 +923,12 @@ html {
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .strong-points__article {
+  .strong-points__figure {
     margin-top: 4px;
     margin-bottom: 16px;
     margin-left: 16px;
   }
-  .strong-points__article_wide {
+  .strong-points__figure_wide {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
@@ -921,7 +941,7 @@ html {
   }
   .strong-points__subheader {
     font-size: 46px;
-    margin-bottom: 22px;
+    margin-bottom: 16px;
   }
   .strong-points__list {
     font-size: 24px;
@@ -1019,15 +1039,15 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  opacity: 1;
-  visibility: visible;
+  opacity: 0;
+  visibility: hidden;
   -webkit-transition: opacity 0.4s, visibility 0.6s;
   transition: opacity 0.4s, visibility 0.6s;
 }
 
-.modal[visible="hidden"] {
-  opacity: 0;
-  visibility: hidden;
+.modal[visible="visible"] {
+  opacity: 1;
+  visibility: visible;
 }
 
 .modal[visible="visible"] .callback::before {
@@ -1136,28 +1156,28 @@ html {
   font-weight: 400;
   font-size: 16px;
   line-height: 100%;
-  letter-spacing: 0%;
+  letter-spacing: 0px;
 }
 
 .callback__name:-ms-input-placeholder, .callback__text:-ms-input-placeholder, .callback__email:-ms-input-placeholder, .callback__text:-ms-input-placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 100%;
-  letter-spacing: 0%;
+  letter-spacing: 0px;
 }
 
 .callback__name::-ms-input-placeholder, .callback__text::-ms-input-placeholder, .callback__email::-ms-input-placeholder, .callback__text::-ms-input-placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 100%;
-  letter-spacing: 0%;
+  letter-spacing: 0px;
 }
 
 .callback__name::placeholder, .callback__text::placeholder, .callback__email::placeholder, .callback__text::placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 100%;
-  letter-spacing: 0%;
+  letter-spacing: 0px;
 }
 
 .callback__name:hover, .callback__text:hover, .callback__email:hover, .callback__text:hover {
@@ -1273,10 +1293,5 @@ html {
 
 .callback__accept-decoration {
   padding-right: 10px;
-}
-
-.hidden {
-  opacity: 0;
-  visibility: hidden;
 }
 /*# sourceMappingURL=style.css.map */
