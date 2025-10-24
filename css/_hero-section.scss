@@ -1,5 +1,5 @@
 .hero-section {
-  min-height: 630px;
+  min-height: 570px;
   background-image: image-set("../img/hero-desktop.jpg" 1x, "../img/hero-desktop@2x.jpg" 2x);
   display: flex;
   justify-content: center;
@@ -18,12 +18,24 @@
   &__title {
     @include fontPlayfair(500);
     text-align: center;
-    min-width: 650px;
   }
 
   &__subtitle {
     font-size: 20px;
     text-align: center;
+  }
+}
+@media (min-width: ($laptopWidth + 1px)) {
+  .hero-section {
+  padding:30px 0px; 
+
+    &__title {
+    min-width: 650px;
+  }
+
+  &__logo {
+    max-width: 80%;
+  }
   }
 }
 
@@ -39,6 +51,7 @@
       height: 50%;
       width: 100%;
       padding: 83px 0 106px;
+      margin-bottom: 50%;
     }
 
     &__title {
@@ -56,11 +69,11 @@
 @media (max-width: $mobileWidth) {
 
   .hero-section {
+    justify-content: start;
+    align-items: start;
     background-image: image-set("../img/hero-mobile.jpg" 1x, "../img/hero-mobile@2x.jpg" 2x);
 
     &__logo {
-      height: 50%;
-      width: 100%;
       padding: 84px 0 103px;
     }
 
