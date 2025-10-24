@@ -1,7 +1,7 @@
 .biography {
   display: grid;
   grid-template-columns: 49% auto 39%;
-  grid-template-rows: 53% 5% 7% 35%;
+  grid-template-rows: 52% 12% 35%;
   color: $secondaryColor;
   font-size: $fontSizeM;
   align-items: stretch;
@@ -31,26 +31,10 @@
 
   &__info {
     line-height: 115%;
+    position: relative;
+    padding-bottom: 10px;
   }
 
-  &__list {
-    list-style: "/";
-    white-space: nowrap
-  }
-
-  &__list li,
-  &__bullet {
-    display: inline;
-  }
-
-
-  &__decoration {
-    width: 20px;
-    height: 6px;
-    background-color: $secondaryColor;
-    border: none;
-    margin: 35px 0 18px 0;
-  }
 
   &__quote {
     @include fontBitter(26px);
@@ -58,6 +42,7 @@
     color: $secondaryColor;
     font-weight: 300;
     max-width: 82%;
+    padding-top: 6px;
   }
 }
 
@@ -74,9 +59,29 @@
       @include allHeight();
     }
 
-    &__dash {
-      display: none;
-    }
+    &__list
+   {
+    display: flex;
+    gap: 10px;
+   }
+
+     &__list li{
+    list-style: "/";
+    white-space: nowrap;
+    list-style-position: outside;
+  }
+
+  &__list li:first-child{
+    list-style: none;
+  }
+      &__info::after{
+    content: "";
+    width: 20px;
+    height: 6px;
+    background-color: $secondaryColor;
+    position: absolute;
+    bottom: 13px;
+  }
 
     &__new-line {
       display: none;
@@ -109,10 +114,10 @@
       @include allWidth();
     }
 
+        &__subject::before {
+          content: "-";
+        }
 
-    &__dash {
-      display: inline;
-    }
 
     &__info {
       grid-area: 1;
@@ -127,17 +132,11 @@
       }
     }
 
-
-    &__decoration,
-    &__bullet {
-      display: none;
-    }
-
     &__quote {
       font-size: 30px;
       font-weight: 300;
       max-width: 100%;
-      margin-top: 58px;
+      margin-top: 42px;
       @include allWidth();
     }
 
