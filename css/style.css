@@ -1074,8 +1074,8 @@ html {
 }
 
 .callback {
-  max-width: 440px;
-  min-height: 533px;
+  max-width: 436px;
+  min-height: 540px;
   background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1110,14 +1110,15 @@ html {
 .callback__header {
   font-weight: 700;
   font-size: 24px;
-  padding-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .callback__label {
   padding-top: 10px;
   padding-bottom: 5px;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
+  font-family: "roboto";
 }
 
 .callback__input-container {
@@ -1135,26 +1136,30 @@ html {
   position: absolute;
   width: 30px;
   height: 30px;
-  right: 10px;
-  top: 20px;
+  right: 13px;
+  top: 7px;
 }
 
 .callback__question {
   font-weight: 400;
   font-size: 18px;
+  font-family: "roboto";
+  line-height: 24px;
+  margin-bottom: 5px;
 }
 
 .callback__name, .callback__text, .callback__email {
   border: 1px solid #B3B3B3;
   background: #fff;
   border-radius: 8px;
-  min-height: 54px;
+  min-height: 43px;
   outline-color: transparent;
   -webkit-transition: color 0.4s, outline-color 0.5s, background 0.8s;
   transition: color 0.4s, outline-color 0.5s, background 0.8s;
-  padding: 6px 10px;
+  padding: 0px 10px;
   font-weight: 500;
   font-size: 16px;
+  font-family: "roboto";
 }
 
 .callback__text {
@@ -1175,6 +1180,7 @@ html {
   font-size: 16px;
   line-height: 100%;
   letter-spacing: 0px;
+  font-family: "roboto";
 }
 
 .callback__name:-ms-input-placeholder, .callback__text:-ms-input-placeholder, .callback__email:-ms-input-placeholder, .callback__text:-ms-input-placeholder {
@@ -1182,6 +1188,7 @@ html {
   font-size: 16px;
   line-height: 100%;
   letter-spacing: 0px;
+  font-family: "roboto";
 }
 
 .callback__name::-ms-input-placeholder, .callback__text::-ms-input-placeholder, .callback__email::-ms-input-placeholder, .callback__text::-ms-input-placeholder {
@@ -1189,6 +1196,7 @@ html {
   font-size: 16px;
   line-height: 100%;
   letter-spacing: 0px;
+  font-family: "roboto";
 }
 
 .callback__name::placeholder, .callback__text::placeholder, .callback__email::placeholder, .callback__text::placeholder {
@@ -1196,6 +1204,23 @@ html {
   font-size: 16px;
   line-height: 100%;
   letter-spacing: 0px;
+  font-family: "roboto";
+}
+
+.callback__text::-webkit-input-placeholder {
+  padding-top: 5px;
+}
+
+.callback__text:-ms-input-placeholder {
+  padding-top: 5px;
+}
+
+.callback__text::-ms-input-placeholder {
+  padding-top: 5px;
+}
+
+.callback__text::placeholder {
+  padding-top: 5px;
 }
 
 .callback__name:hover, .callback__text:hover, .callback__email:hover, .callback__text:hover {
@@ -1242,7 +1267,7 @@ html {
   border: 1px solid #B3B3B3;
   background: #fff;
   border-radius: 8px;
-  min-height: 54px;
+  min-height: 43px;
   outline-color: transparent;
   -webkit-transition: color 0.4s, outline-color 0.5s, background 0.8s;
   transition: color 0.4s, outline-color 0.5s, background 0.8s;
@@ -1278,7 +1303,7 @@ html {
   border: 1px solid #B3B3B3;
   background: #fff;
   border-radius: 8px;
-  min-height: 54px;
+  min-height: 43px;
   outline-color: transparent;
   -webkit-transition: color 0.4s, outline-color 0.5s, background 0.8s;
   transition: color 0.4s, outline-color 0.5s, background 0.8s;
